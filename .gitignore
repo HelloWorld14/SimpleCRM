@@ -1,0 +1,10 @@
+/.idea
+/.bundle
+
+/log/*
+!/log/.keep
+/tmp
+
+/public/uploads
+/config/database.yml
+/config/secrets.yml
