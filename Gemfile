@@ -10,6 +10,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'responders'
+gem 'active_model_serializers'
+gem 'ember-rails'
+gem 'ember-source'
 
 group :development, :test do
   gem 'byebug'

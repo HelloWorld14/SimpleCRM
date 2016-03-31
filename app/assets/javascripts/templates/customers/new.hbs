@@ -1,0 +1,32 @@
+<h1>Новый клиен</h1>
+
+<form {{action 'create' model on='submit'}}>
+    <b>ФИО :</b>
+    {{input value=model.name}}
+    {{#each model.errors.name as |error|}}
+        <div class="error">
+            {{error.message}}
+        </div>
+    {{/each}}
+    <br/>
+    <b>Телефон :</b>
+    {{input value=model.phone}}
+    {{#each model.errors.phone as |error|}}
+        <div class="error">
+            {{error.message}}
+        </div>
+    {{/each}}
+    <br/>
+    <b>e-Mail :</b>
+    {{input value=model.email}}
+    {{#each model.errors.email as |error|}}
+        <div class="error">
+            {{error.message}}
+        </div>
+    {{/each}}
+    <br/>
+
+    <input type="submit" value="Создать">
+</form>
+
+{{outlet}}

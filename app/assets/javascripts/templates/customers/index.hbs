@@ -1,0 +1,14 @@
+<h1>Клиенты</h1>
+
+<table>
+    {{#each model as |customer| }}
+        <tr>
+            <td>{{#link-to 'customers.show' customer.id}}{{customer.name}}{{/link-to}}</td>
+            <td>{{customer.created_at}}</td>
+            <td><button {{ action 'destroy' customer}}>Удалить</button></td>
+        </tr>
+    {{/each}}
+</table>
+
+{{#link-to 'customers.new'}}Добавить{{/link-to}}
+{{outlet}}

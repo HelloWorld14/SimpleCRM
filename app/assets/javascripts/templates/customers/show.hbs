@@ -1,0 +1,13 @@
+<h1>Карточка клиента</h1>
+
+<b>{{model.name}}</b>
+<br>
+<b>{{model.phone}}</b>
+<br>
+<b>{{model.email}}</b>
+<br>
+
+{{#link-to 'customers'}}Назад{{/link-to}}
+{{#link-to 'customers.edit' model.id}}Редактировать{{/link-to}}
+
+{{outlet}}
