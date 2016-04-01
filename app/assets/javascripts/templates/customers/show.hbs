@@ -1,13 +1,20 @@
-<h1>Карточка клиента</h1>
+<table class="table table-bordered table-hover table-striped">
+    <tbody>
+        <tr>
+            <td><b>ФИО :</b></td>
+            <td>{{model.name}}</td>
+        </tr>
+        <tr>
+            <td><b>Телефон :</b></td>
+            <td>{{model.phone}}</td>
+        </tr>
+        <tr>
+            <td><b>eMail :</b></td>
+            <td>{{model.email}}</td>
+        </tr>
+    </tbody>
+</table>
 
-<b>{{model.name}}</b>
-<br>
-<b>{{model.phone}}</b>
-<br>
-<b>{{model.email}}</b>
-<br>
 
-{{#link-to 'customers'}}Назад{{/link-to}}
-{{#link-to 'customers.edit' model.id}}Редактировать{{/link-to}}
-
-{{outlet}}
+{{#link-to 'customers.edit' model.id class='btn btn-primary'}}Редактировать{{/link-to}}
+{{#link-to 'customers.index' class='btn btn-primary'}}Назад{{/link-to}}

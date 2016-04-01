@@ -1,33 +1,36 @@
-<h1>Карточка клиента</h1>
-
 <form {{action 'update' model on='submit'}}>
-    <b>ФИО :</b>
-    {{input value=model.name}}
-    {{#each model.errors.name as |error|}}
-        <div class="error">
-            {{error.message}}
-        </div>
-    {{/each}}
-    <br/>
-    <b>Телефон :</b>
-    {{input value=model.phone}}
-    {{#each model.errors.phone as |error|}}
-        <div class="error">
-            {{error.message}}
-        </div>
-    {{/each}}
-    <br/>
-    <b>e-Mail :</b>
-    {{input value=model.email}}
-    {{#each model.errors.email as |error|}}
-        <div class="error">
-            {{error.message}}
-        </div>
-    {{/each}}
-    <br/>
+    <div class="form-group">
+        <label for="customer-name">Имя</label>
+        {{input value=model.name class='form-control' id='customer-name'}}
+        {{#each model.errors.name as |error|}}
+            <div class="error">
+                {{error.message}}
+            </div>
+        {{/each}}
+    </div>
 
-    <input type="submit" value="Сохранить">
-    {{#link-to 'customers.show' model}}Отмена{{/link-to}}
+    <div class="form-group">
+        <label for="customer-phone">Телефон</label>
+        {{input value=model.phone class='form-control' id='customer-phone'}}
+        {{#each model.errors.phone as |error|}}
+            <div class="error">
+                {{error.message}}
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="form-group">
+        <label for="customer-email">e-Mail</label>
+        {{input value=model.email class='form-control' id='customer-email'}}
+        {{#each model.errors.email as |error|}}
+            <div class="error">
+                {{error.message}}
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-primary">
+        {{#link-to 'customers.show' model class='btn btn-primary'}}Отмена{{/link-to}}
+    </div>
 </form>
-
-{{outlet}}

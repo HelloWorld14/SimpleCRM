@@ -14,6 +14,7 @@ gem 'responders'
 gem 'active_model_serializers'
 gem 'ember-rails'
 gem 'ember-source'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'

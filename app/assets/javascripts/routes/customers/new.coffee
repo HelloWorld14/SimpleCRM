@@ -9,6 +9,7 @@ SimpleCRM.CustomersNewRoute = Ember.Route.extend({
     willTransition: ->
       @get('currentModel').unloadRecord()
 
+
     create: (customer) ->
       self = @
 
