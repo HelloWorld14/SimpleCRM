@@ -12,10 +12,15 @@
             <tr>
                 <td>{{#link-to 'customers.show' customer.id}}{{customer.name}}{{/link-to}}</td>
                 <td>{{customer.created_at}}</td>
-                <td><button {{ action 'destroy' customer }} class='btn btn-xs btn-danger'>Удалить</button></td>
+                <td>
+                    <button {{ action 'deleteCustomer' customer }} class='btn btn-xs btn-danger'>
+                        Удалить
+                    </button>
+                </td>
             </tr>
         {{/each}}
     </tbody>
 </table>
 
 {{#link-to 'customers.new' class='btn btn-primary'}}Добавить{{/link-to}}
+{{outlet 'modal'}}
