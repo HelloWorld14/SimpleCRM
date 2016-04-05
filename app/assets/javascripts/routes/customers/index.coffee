@@ -5,7 +5,7 @@ SimpleCRM.CustomersIndexRoute = Ember.Route.extend({
     @store.findAll('customer')
 
   actions: {
-    deleteCustomer: (customer) ->
+    destroy: (customer) ->
       @render('modals/confirm', {
         into: 'customers/index'
         outlet: 'modal'
@@ -18,7 +18,7 @@ SimpleCRM.CustomersIndexRoute = Ember.Route.extend({
         parentView: 'customers/index'
       })
 
-    destroyCustomer: (customer) ->
+    confirmModal: (customer) ->
       customer.destroyRecord()
   }
 })

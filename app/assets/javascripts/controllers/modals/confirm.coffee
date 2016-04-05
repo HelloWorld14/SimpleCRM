@@ -2,5 +2,6 @@
 
 SimpleCRM.ModalsConfirmController = Ember.Controller.extend({
 
+
 })
 

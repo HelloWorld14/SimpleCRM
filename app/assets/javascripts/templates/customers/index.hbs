@@ -13,7 +13,7 @@
                 <td>{{#link-to 'customers.show' customer.id}}{{customer.name}}{{/link-to}}</td>
                 <td>{{customer.created_at}}</td>
                 <td>
-                    <button {{ action 'deleteCustomer' customer }} class='btn btn-xs btn-danger'>
+                    <button {{ action 'destroy' customer }} class='btn btn-xs btn-danger'>
                         Удалить
                     </button>
                 </td>
