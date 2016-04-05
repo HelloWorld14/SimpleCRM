@@ -16,11 +16,11 @@ SimpleCRM.ModalConfirmComponent = Ember.Component.extend({
 
   actions: {
     confirm: (record) ->
-      @sendAction('confirmModal', record)
-      @sendAction('hideModal')
-
       modal = @get('modal')
       modal.modal('hide')
+
+      @sendAction('confirmModal', record)
+      @sendAction('hideModal')
   }
 })
 
